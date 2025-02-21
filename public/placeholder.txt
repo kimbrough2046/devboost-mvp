@@ -1,0 +1,1 @@
+This file exists to ensure GitHub keeps the 'public' directory.
