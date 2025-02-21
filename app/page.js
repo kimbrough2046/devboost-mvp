@@ -9,16 +9,28 @@ export default function Home() {
     setSelectedFile(event.target.files[0]);
   };
 
-  const handleUpload = async () => {
-    if (!selectedFile) {
-      alert("Please select a file first.");
-      return;
-    }
-    
-    // For now, just log the file
-    console.log("File selected:", selectedFile);
-    alert(`File "${selectedFile.name}" uploaded successfully!`);
-  };
+ const handleUpload = async () => {
+  if (!selectedFile) {
+    alert("Please select a file first.");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("file", selectedFile);
+
+  try {
+    const response = await fetch("/api/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    alert(data.message || "Upload successful!");
+  } catch (error) {
+    alert("Upload failed.");
+    console.error(error);
+  }
+};
 
   return (
     <main>
