@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,  // Helps catch potential issues in React
-  swcMinify: true,        // Uses SWC compiler for better performance
+  reactStrictMode: true,
   experimental: {
-    serverActions: true,  // Enables Next.js server actions for better API handling
+    serverActions: false, // Fix: This must be an object, not a boolean
   },
 };
 
