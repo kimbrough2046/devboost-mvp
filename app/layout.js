@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <h1>DevBoost</h1>
+          <a href="#" className="cta-button">Save Development Time Now</a>
         </header>
         <main>{children}</main>
         <footer>
