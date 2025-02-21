@@ -58,3 +58,30 @@ footer {
     font-size: 1.2rem;
   }
 }
+/* Upload Section */
+.upload-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px dashed #0070f3;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+}
+
+.upload-section input {
+  margin: 10px 0;
+}
+
+.upload-section button {
+  padding: 10px 15px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.upload-section button:hover {
+  background-color: #005bb5;
+}
